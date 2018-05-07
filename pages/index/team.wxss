@@ -1,0 +1,28 @@
+page{
+  background-color: #efefef
+}
+.mapArea{
+  width: 100%; 
+  height: 1110rpx;
+  position: fixed;
+  top:84rpx
+}
+.remainMessage{
+  margin: auto;
+  width: 266rpx;
+  height: 68rpx;
+  border-radius: 32rpx;
+  background-color:#4a4a4a;
+  display: flex;
+  flex-direction: row 
+}
+.remainMessage text{
+  margin: auto 0 auto 30rpx;
+  font-size: 24rpx;
+  color: #FFFFFF; 
+}
+.remainMessage image{
+  margin: auto 0 auto 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+}

@@ -1,0 +1,189 @@
+page{
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+.applyFrame{
+  margin-top: 20rpx; 
+  padding: 24rpx 0;
+  width: 750rpx;
+  min-height: 120rpx;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff
+}
+.applyInfoFrame{
+  display: flex;
+  flex-direction: column;
+  width: 534rpx;
+  padding: 0 30rpx;
+}
+.applyInfoFrame text{
+  font-size: 28rpx;
+  color: #BBBBBB;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+.applyList{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+.applyHeadImg{
+  margin-right: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.applyButton{
+  margin: auto 0;
+  width: 132rpx;
+  height: 72rpx;
+  background-color: #3db4f4;
+  padding: 0;
+  line-height: 72rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+}
+.contact{
+  position: absolute;
+  top:50rpx;
+  right: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.amendButtom{
+  position: absolute;
+  font-size: 28rpx;
+  right: 30rpx;
+  top:110rpx;
+  color: #3db4f4
+}
+.businessFrame{
+  margin: 20rpx auto 0 auto;
+  width: 670rpx;
+  height: 100rpx;
+  background: #EFEFEF;
+  border: 1px solid #E4E4E4;
+  display: flex;
+  flex-direction:row; 
+}
+.businessFrame image{
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto 16rpx auto 14rpx
+}
+.businessFrame text{
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #000000;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+.lotteryCodeFrame{
+  margin-top: 20rpx;
+  width: 750rpx;
+  min-height: 212rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color:#fff;
+  border: 2rpx solid #E4E4E4; 
+  padding-bottom: 10rpx;
+}
+.lotteryTitle{
+  display: flex;
+  flex-direction: row;
+}
+.lottery_name{
+  margin: 28rpx 20rpx 0 28rpx;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  letter-spacing: 0.4px;
+  line-height: 28rpx;
+}
+.lottery_remain{
+  margin-top: 28rpx;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  letter-spacing: 0.4px;
+  line-height: 28rpx;
+}
+.lotteryCode{
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.lotteryCode text{
+  margin-left: 28rpx;
+  font-size: 28rpx;
+  color: #3DB4F4;
+  letter-spacing: 0.4px;
+  line-height: 28rpx;
+}
+.lotteryRuleFrame{
+  margin-top:28rpx;
+  margin-left: 28rpx; 
+  display: flex;
+  flex-direction:column;
+}
+.ruleTitle{
+  display: flex;
+  flex-direction:row;
+}
+.ruleTitle text{
+  font-size: 28rpx;
+  color: #9B9B9B;
+  letter-spacing: 0.4px;
+  line-height: 28rpx;
+}
+.ruleTitle view{
+  margin-left: 160rpx;
+  font-size: 28rpx;
+  color: #3db4f4;
+  letter-spacing: 0.4px;
+  line-height: 28rpx;
+}
+.rules{
+  width: 700rpx;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  line-height: 34rpx;
+}
+.hide{
+  display: none
+}
+.payFrame{
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 136rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: 2rpx solid #E4E4E4
+}
+.payInfo{
+  margin-left: 28rpx;
+  margin-top: 28rpx;
+  display: flex;
+  flex-direction: column;  
+  width: 560rpx;
+}
+.money{
+  font-size: 48rpx;
+  color: #3DB4F4;
+  letter-spacing: 0px;
+  line-height: 48rpx;
+}
+.shuom{
+  margin-top: 8rpx;
+  margin-left: 4rpx;
+  font-size: 24rpx;
+  color: #BBBBBB;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+}

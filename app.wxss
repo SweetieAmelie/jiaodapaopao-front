@@ -1,0 +1,888 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 90rpx 0;
+  box-sizing: border-box;
+} 
+.flexWrap{
+  display: flex;
+}
+.praise{
+  position: absolute;
+  right: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.hide{
+  display: none
+}
+.filter{
+  filter: blur(10px)
+}
+/***** 头部选择 ******/
+.title{
+    border:1px solid #e4e4e4;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width: 750rpx;
+    height: 80rpx;
+    background-color: #FFFFFF;
+    z-index: 999;
+    top:0
+}
+.searchLogo{
+  width: 36rpx;
+  height: 36rpx;
+  margin: auto 0 auto 28rpx;
+}
+.bannerFrame{
+  width: 750rpx;
+  height: 160rpx;
+  margin-bottom: 10rpx;
+}
+.slide-image{
+  width: 750rpx;
+  height: 160rpx;
+}
+.titleFrame{
+  margin: auto 0 auto 158rpx;
+  display: flex;
+  flex-direction: row;
+}
+.itemFrame{
+  margin-right: 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+.itemFrame text{
+  font-size: 24rpx;
+  color: #9B9B9B;
+}
+.itemFrame text.active{
+  color: #3db4f4;
+}
+.itemLine{
+  position: absolute;
+  bottom: 0;
+  height: 6rpx;
+  width: 56rpx;
+  background-color: #3DB4F4;
+  margin: 0 auto
+}
+.createTeam{
+  margin: auto 0;
+  border:0;
+  background-color: #3DB4F4;
+  color: #FFFFFF;
+  width: 144rpx;
+  height: 50rpx;
+  padding: 0;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+/******** 评论 聊天内容显示 ******/
+.teamFrameArr{
+  display: flex;
+  flex-direction: row;
+}
+.operationFrame{
+    position: relative;
+    margin-top: 24rpx;
+    margin-left: 28rpx;
+    display: flex;
+    flex-direction: row;
+    width: 750rpx;
+    height: 60rpx;
+    border-top: 2rpx solid #e4e4e4
+}
+.message{
+    width: 36rpx;
+    height: 36rpx;
+}
+.messageIcon{
+    position: absolute;
+    left:150rpx;
+    top: 10rpx;
+    bottom: 30rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.agree{
+    position: absolute;
+    left: 532rpx;
+    top: 10rpx;
+    bottom: 30rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.oppose{
+    position: absolute;
+    left: 682rpx;
+    top: 12rpx;
+    bottom: 30rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.explainPerson{
+    position: absolute;
+    left:200rpx;
+    top: 16rpx;
+    bottom: 30rpx;
+    margin: auto 10rpx;
+    font-size: 24rpx;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+    line-height: 24rpx;
+}
+.explain{
+    margin: auto 10rpx;
+    font-size: 24rpx;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+    line-height: 24rpx;
+}
+.messageFrameCo{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 40rpx auto auto;
+}
+.agreeNum{
+  position: absolute;
+  left: 570rpx;
+  top: 16rpx;
+  width: 78rpx;
+  text-align: center;
+  padding: 0 16rpx;
+  font-size: 24rpx;
+  color: #4A4A4A;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+}
+.shareLogo{
+  position: absolute;
+  top:10rpx;
+  bottom: 30rpx;
+  width:36rpx;
+  height: 36rpx;
+  left:28rpx;
+}
+.shareNum{
+  height: 24rpx;
+  padding-left: 80rpx;
+  position: absolute;
+  top: 14rpx;
+  bottom: 30rpx;
+  font-size: 24rpx;
+  color: #666666;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+  background-color: rgba(255, 255, 255,0);
+  z-index: 9;
+}
+.shareNum::after{
+  border:0
+}
+/******* 内容显示 ********/
+.labelTriangle{
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 68rpx solid #fe2851;
+  border-left: 116rpx solid transparent; 
+}
+.triangleLable{
+  position: absolute;
+  font-size: 20rpx;
+  margin-top: 6rpx;
+  right: 4rpx;
+  color: #fff;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+}
+.statusFrame{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row
+}
+.statusLable{
+  margin: auto 10rpx auto 0;
+  width: 96rpx;
+  height: 30rpx;
+  border-radius: 4rpx;
+  background-color:#3DB4F4;
+  color: #fff;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 20rpx; 
+}
+.statusLableBusiness{
+  margin: auto 10rpx auto 0;
+  width: 96rpx;
+  height: 30rpx;
+  border-radius: 4rpx;
+  background-color:#ffb600;
+  color: #fff;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 20rpx; 
+  border-style: dotted;
+  border-width: 4rpx;
+}
+.teamDtails{
+  position: relative
+}
+.teamTitleFrame{
+  display: flex;
+  flex-direction: row;
+}
+.lableList{
+  padding: 12rpx 28rpx;
+  display: flex;
+  flex-wrap:wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+}
+.distance{
+  margin: 20rpx auto auto 40rpx;
+  font-size: 28rpx;
+  color: #3db4f4;
+  letter-spacing: 0px;
+  line-height: 32rpx;
+}
+.distance_show{
+  margin: auto 40rpx auto auto;
+  font-size: 28rpx;
+  color: #3db4f4;
+  letter-spacing: 0px;
+  line-height: 32rpx;
+}
+.textLineHeight{
+  line-height: 40rpx;
+}
+.teamFrame{
+  margin-top: 20rpx;
+  min-height: 32rpx;
+  width: 540rpx;
+  height: auto;
+  display: flex;
+  flex-direction: row
+}
+.itemLogo{
+  margin: auto 20rpx auto 28rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.itemInfo{
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #3db4f4;
+  letter-spacing: 0px;
+  line-height: 16px;
+}
+.lableInfo{
+  margin: 5rpx 8rpx;
+  padding: 0 10rpx;
+  min-width: 112rpx;
+  width: auto;
+  height: 44rpx;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+  line-height: 44rpx;
+  text-align: center
+}
+.teamLi{
+  padding-bottom: 28rpx;
+  margin-top: 12rpx;
+  background-color: #ffffff;
+  width: 750rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.teamNameFrame{
+  display: flex;
+  flex-direction: row;
+  height: 120rpx;
+}
+.headUrl{
+  margin: auto 28rpx auto 28rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.teamAdminName{
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #4a4a4a;
+  letter-spacing: 0px;
+  max-width: 280rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.teamAdminSchool{
+  width: 300rpx;
+  margin: auto 16rpx;
+  font-size: 28rpx;
+  color: #4a4a4a;
+  letter-spacing: 0px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.teamContent{
+  padding: 24rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+.teamName{
+  margin-left: 28rpx;
+  font-size: 36rpx;
+  color: #4A4A4A;
+  letter-spacing: 0px;
+}
+.teamNameInfoFrame{
+  margin: auto 0;
+  display: flex;
+  flex-direction:column;
+}
+.teamNameTime{
+  margin: auto 0;
+  font-size: 24rpx;
+  color: #BBBBBB;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+}
+.teamNameInfo{
+  display: flex;
+  flex-direction: row;
+}
+.teamInfo{
+  padding: 20rpx 50rpx 0rpx 28rpx;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  letter-spacing: 0px;
+  line-height: 36rpx;
+}
+.teamPics{
+  margin-left: 28rpx;
+  margin-top: 40rpx;
+  padding-right: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.teamPic{
+  width: 160rpx;
+  height: 160rpx;
+  padding-right: 20rpx; 
+}
+.picFrame{ 
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  display: flex;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.deleLogo{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.teamVideo{
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #4A4A4A;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20rpx; 
+  margin-bottom: 20rpx;
+}
+.teamVideo image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: auto;
+  padding: 0
+}
+.locationInfo{
+  margin-left: 28rpx;
+  color: #9c9c9c;
+  font-size: 24rpx;
+}
+/*******个人资料页面头部样式 *******/
+.personInfo{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 750rpx;
+  height: 272rpx;
+  border-top: 1px solid #fff
+}
+.amendButton{
+  padding: 0;
+  position: absolute;
+  top:36rpx;
+  left:574rpx;
+  width: 148rpx;
+  height: 48rpx;
+  background-color: rgba(155,154,155,0.4);
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  letter-spacing: 0px;
+  line-height: 48rpx;
+  z-index: 99
+}
+.headImg{
+    position: absolute;
+    top: 182rpx;
+    left: 48rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    z-index: 99;
+}
+.genderImg{
+    margin: 6rpx 16rpx; 
+    width: 30rpx;
+    height: 30rpx;
+}
+.personFrame{
+    position: absolute;
+    top:176rpx;
+    margin-left:250rpx;
+    margin-right: auto; 
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+.personName{
+    padding: 5rpx 0;
+    font-size: 36rpx;
+    color: #ffffff;
+    letter-spacing: 0px;
+}
+.introductionInfo{
+    margin-left:0; 
+    padding: 0rpx 200rpx 10rpx 48rpx;
+    width: 502rpx;
+    min-height: 64rpx;
+    height: auto;
+    background-color: #fff;
+    font-size: 28rpx;
+    color: #9B9B9B;
+    letter-spacing: 0px;
+    line-height: 28rpx;
+}
+.cerButton{
+  position: absolute;
+  right: 28rpx;
+  padding: 0;
+  width: 124rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color:#efefef;
+  color: #9B9B9B;
+  font-size: 24rpx; 
+}
+.whiteBlock{
+  position: relative;
+  width: 750rpx;
+  height: 60rpx;
+  background-color: #fff;
+}
+/*****评论输入区域样式********/
+.commentFrame{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 96rpx;
+  border: 1px solid #e4e4e4;
+  background-color: #fafafa;
+  z-index: 99;
+}
+.commentFrame image{
+  width: 48rpx;
+  height: 48rpx;
+  margin: auto 0 auto 28rpx;
+}
+.commentFrame input{
+  margin: auto 0 auto 24rpx;
+  padding: 0 16rpx; 
+  width: 516rpx;
+  height: 72rpx;
+  border: 1px solid #d8d8d8;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+}
+.commentFrame button{
+  width: 106rpx;
+  height: 72rpx;
+  background-color: #3DB4F4;
+  color: #fff;
+  line-height: 72rpx;
+  padding: 0;
+  font-size: 28rpx;
+  margin: auto; 
+}
+/********  评论区域样式 ********/
+.discussFrame{
+  padding-bottom: 120rpx;
+  width: 750rpx;
+  min-height: 292rpx;
+  height: auto;
+  border: 1px solid #e4e4e4;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff
+}
+.discussTitle{
+  width: 722rpx;
+  margin-left: 28rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  font-size: 28rpx;
+  color: #BBBBBB;
+  letter-spacing: 0px;
+  border-bottom: 1px solid #e4e4e4
+}
+.discussList{
+  display: flex;
+  flex-direction: column;
+}
+.noneDiscuss{
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.noneDiscuss image{
+  margin-top: 80rpx;
+  width: 90rpx;
+  height: 76rpx;
+}
+.noneDiscuss text{
+  margin-top: 44rpx;
+  font-size: 28rpx;
+  color: #D8D8D8;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+.discussLi{
+  width: 750rpx;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.discussInfoFrame{
+  margin-left: 60rpx;
+  display: flex;
+  flex-direction: column;
+}
+.discussInfoFrame text{
+  margin: 0 auto;
+  width: 544rpx;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  letter-spacing: 0px;
+  line-height: 36rpx;
+}
+.discussImageList{
+  margin: 0 auto;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  width: 544rpx;
+}
+.discussImageList image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 12rpx; 
+}
+.videoFrame{
+  position: fixed;
+  top:0;
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  overflow: hidden;
+}
+.closeVideo{
+  width: 30rpx;  
+}
+.closeVideoFrame{
+  position: absolute;
+  top:50rpx;
+  right: 30rpx;
+  z-index: 99
+}
+
+.mask{
+  position: fixed;
+  top:0;
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #efefef;
+  z-index:991
+}
+.mask image{
+  width: 92rpx;
+  height: 104rpx;
+  margin: 142rpx auto 0 auto;
+}
+.mask text{
+  margin: 26rpx auto 0 auto;
+  width: 750rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #C8C8C8;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+
+.prompMask{
+  position: fixed;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index:999
+}
+.promptFrame{
+  margin: auto;
+  width: 540rpx;
+  height: 290rpx;
+  border-radius: 24rpx;
+  background-color: rgb(250,250,250);
+  display: flex;
+  flex-direction: column
+}
+.promptTitle{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480rpx;
+  height: 130rpx;
+}
+.promptTitle text{
+  margin: auto;
+  font-size: 34rpx;
+  color: #030303;
+  letter-spacing: -0.41px;
+  line-height: 40rpx;
+  font-weight: bold;
+  text-align: center
+}
+.inputFrame{
+  width: 540rpx;
+  height: 70rpx;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+}
+.inputFrame input{
+  margin: 0 auto;
+  width: 474rpx;
+  height: 48rpx;
+  border: 1px solid #e4e4e4;
+  background-color: #ffffff;
+  font-size: 28rpx;
+  color:#4a4a4a
+}
+.buttonFrame{
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+.cancelButton{
+  width: 268rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #3db4f4;
+  text-align: center;
+  border-right: 1px solid #e4e4e4
+}
+.confirmButton{
+  width: 268rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fe3824
+}
+
+.addLable{
+  margin: auto 0 auto 60rpx;
+  width: 45rpx;
+  height: 45rpx;
+}
+.overflow{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.refreshButton{
+  width:100rpx;
+  height: 72rpx;
+}
+.floatRefresh{
+  display: flex;
+  position: fixed;
+  top:644rpx;
+  right: 0;
+  z-index: 999
+}
+.indexButton{
+  width:100rpx;
+  height: 72rpx;
+}
+.floatIndex{
+  display: flex;
+  position: fixed;
+  top:544rpx;
+  right: 0;
+  z-index: 999
+}
+
+/***** 弹窗样式 ******/
+.modelMask{
+  position: fixed;
+  top:0;
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index:991;
+  align-items: center;
+  background-color:rgba(0,0,0,0.3);
+}
+.modelShow{
+  margin: auto;
+  width: 600rpx;
+  height: 400rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2rpx solid #e4e4e4
+}
+.modelTitle{
+  margin: 40rpx auto 40rpx auto;
+  color: #4a4a4a;
+  font-size: 32rpx;
+}
+.modelContent{
+  padding:0 40rpx;
+  margin-bottom:60rpx; 
+  color: #4a4a4a;
+  font-size: 28rpx;
+}
+.modelButtons{
+  display: flex;
+  flex-direction: row;
+}
+.modelCancel{
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-right: 80rpx;
+  background-color: #fe3824;
+  color: #fff
+}
+.modelConfirm{
+  width: 160rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #3db4f4;
+  color: #fff
+}
+/*****商家内容 ****/
+.businessFrame{
+  margin: 20rpx auto 0 auto;
+  width: 670rpx;
+  height: 100rpx;
+  background: #EFEFEF;
+  border: 1px solid #E4E4E4;
+  display: flex;
+  flex-direction:row; 
+}
+.businessFrame image{
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto 16rpx auto 14rpx
+}
+.businessFrame text{
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #000000;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+
+/**** 投票点击页面 ****/
+.voteListFrame{
+  margin: 0 auto;
+  width: 670rpx;
+  height: auto;
+  background-color: #fafafa;
+  border-radius: 6rpx;
+  display: flex;
+  flex-direction: column;
+}
+.voteLi{
+  width: 670rpx;
+  height: 80rpx;
+  border: 2rpx solid #e4e4e4;
+  display: flex
+}
+.voteLi text{
+  margin: auto;
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 28rpx;
+}
+.completedVoteLi{
+  width: 670rpx;
+  height: 80rpx;
+  border: 2rpx solid #e4e4e4;
+  display: flex;
+  flex-direction: row
+}
+.voteName{
+  padding-left: 28rpx;
+  margin: auto 0;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  line-height: 80rpx;
+  height: 80rpx;
+  word-break:keep-all;
+}
+.voteNumber{
+  margin: auto 28rpx auto auto;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  line-height: 28rpx;
+}

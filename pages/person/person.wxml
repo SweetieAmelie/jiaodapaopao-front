@@ -1,0 +1,4 @@
+<!--person.wxml-->
+<view class="container">
+  <view> fanyufeng </view>
+</view>

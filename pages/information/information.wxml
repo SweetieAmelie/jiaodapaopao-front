@@ -1,0 +1,51 @@
+<!--pages/information/information.wxml-->
+<view style="align-items: center" class="container">
+    <!-- <image bindtap="changeHeadImg" mode="aspectFill" class="personDataHeadImg" src="{{headUrl}}">
+      <text>更换</text>
+    </image> -->
+    <view class="personDataFrame">
+        <view class="line"></view>
+        <text class="personDataName">个人资料</text>
+        <view class="line"></view>
+    </view>
+    <view class="itemList">
+        <view class="itemLi">
+            <input class="item" bindinput="name" maxlength="12" type="text" value="{{nickName}}" placeholder="你的名字" placeholder-style="color:#bbbbbb"/>
+        </view>
+        <view class="itemLi" catchtap="chooseSchool">
+          <view style="height:40rpx" class="item">{{school}}</view>
+        </view>
+        <view class="itemLi">
+            <input class="item" bindinput="major" type="text" value="{{major}}" placeholder="专业" placeholder-style="color:#bbbbbb"/>
+        </view>
+        <view style="border:0;display:flex;flex-direction:row" class="itemLi">
+            <picker mode="selector" bindchange="educationChange" value="{{educationIndex}}" range="{{educationList}}">
+                <view class="educationLine">{{education}}</view>
+            </picker>
+              <picker mode="selector" bindchange="sexChange" value="{{sexIndex}}" range="{{sexList}}">
+                <view style="margin:0 44rpx" class="educationLine">{{gender}}</view>
+            </picker>
+            <picker mode="selector" bindchange="statusChange" value="{{statusIndex}}" range="{{statusList}}">
+                <view class="educationLine">{{status}}</view>
+            </picker>
+        </view>
+    </view>
+    <button bindtap="saveUserInfo" class="saveButton">保存</button>
+    <text class="remind">一个月可修改一次</text>
+    <view bindtap="yzPhone" class="amendPhone">修改绑定手机</view>
+</view>
+<view wx:if="{{openSearchSchool == true}}" class="searchSchool">
+  <view style="margin:0" class="titleFrame">
+    <view class="seaechFrame">
+      <image class="searchLogo" src="/images/UI/sousuo2.png"></image>
+      <input bindinput="searchInfo" bindconfirm="searchDone" class="searchInput" confirm-type="search" focus="true" type="text" value="{{info}}" placeholder="输入学校名称" placeholder-style="color:#91c8ff" />
+      <image bindtap="searchDelete" class="searchDelete" src="../../images/shanchu.png"></image>
+      <image bindtap="closeWin" class="closeWin" src="/images/UI/guanbi.png" ></image>
+    </view>
+  </view>
+  <scroll-view class="schoolList">
+    <view bindtap="seletecdSchool" wx:for="{{schoolList}}" wx:for-index="idx" wx:key="id" data-idx="{{idx}}" class="schoolLi">
+      <text>{{item.collegeName}}</text>
+    </view>
+  </scroll-view>
+</view>

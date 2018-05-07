@@ -1,0 +1,7 @@
+<!--restart.wxml-->
+<view wx:if="{{openAuth == true}}" class="unauthorizedFrame">
+  <text>为了更好的为您服务，组队大师需要您的个人信息授权</text>
+  <view class="buttons">
+    <button bindtap="authorized">重新设置授权</button>
+  </view>
+</view>

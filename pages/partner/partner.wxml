@@ -1,0 +1,64 @@
+<view class="title {{filter}}">
+  <image bindtap="moveToSearch" class="searchLogo" src="/images/UI/searchGrey.png"></image>
+  <view class="titleFrame">
+    <view bindtap="allButton" class="itemFrame">
+      <text class="{{selectedAll}}">全部</text>
+      <view wx:if="{{allControl == true}}" class="itemLine"></view>
+    </view>
+    <view bindtap="cityButton" class="itemFrame">
+      <text class="{{selectedCity}}">失物招领</text>
+      <view wx:if="{{cityControl == true}}" style="width:84rpx;" class="itemLine"></view>
+    </view>
+    <view bindtap="colleageButton" class="itemFrame">
+      <text class="{{selectedColleage}}">跳蚤市场</text>
+      <view wx:if="{{colleageControl == true}}" class="itemLine"></view>
+    </view>
+  </view>
+  <button bindtap="editButton" class="createTeam">发布</button>
+</view>
+  <scroll-view bindscrolltolower="loadMore" style="height:1040rpx;margin-top:84rpx" scroll-y="true" enable-back-to-top="true" bindscrolltoupper="refresh" scroll-top="{{toTop}}" class="teamDtails">
+    <view wx:for="{{partnerList}}" wx:key="partnerNo" wx:for-index="idx" class="teamLi">
+      <view wx:if="{{item.isAttention == 1}}" style="border-top: 68rpx solid #3db4f4;" class="labelTriangle">
+      </view>
+      <text wx:if="{{item.isAttention == 1}}" class="triangleLable">已关注</text>
+      <view class="teamNameFrame">
+        <image catchtap="moveToPerson" data-id="{{item.managerId}}" style="{{item.genderCircle}}" mode="aspectFill" class="headUrl" src="{{item.headUrl}}"></image>
+        <view class="teamNameInfoFrame">
+            <view class="teamNameInfo">
+              <text class="teamAdminName">{{item.PersonName}}</text>
+              <text wx:if="{{item.college != null}}" class="teamAdminSchool">{{item.college}}</text>
+            </view>
+            <view class="statusFrame">
+              <text wx:if="{{item.isCertification == 1}}" class="statusLable">已认证</text>
+              <text class="teamNameTime">{{item.createTime}}</text>
+            </view>
+        </view>
+      </view>
+      <view catchtap="moveToPersonDetail" data-id="{{item.personId}}" class="teamContent">
+        <text class="teamInfo overflow">{{item.introduction}}</text>
+        <view class="teamPics">
+          <view wx:for="{{item.showAnnexLibraryElemList}}" wx:for-item="pics" wx:for-index="picNum" wx:key="picNo" class="teamPicsFrame">
+              <view wx:if="{{pics.status ==2}}" data-path="{{pics.annexUrl}}" catchtap="playVideo" class="teamVideo">
+                <image data-index="{{idx}}" wx:for-index="picNum"  class="teamPic" src="/images/UI/playLogo.png"></image>
+              </view>
+              <image wx:if="{{pics.status ==1}}" data-index="{{idx}}" mode="aspectFill" class="teamPic" data-pic="{{picNum}}" catchtap="selectedPic" src="{{pics.annexUrl}}"></image>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{item.longitude != 0}}" catchtap="openAddress" data-lat="{{item.latitude}}" data-address="{{item.address}}" data-lon="{{item.longitude}}">
+        <text wx:if="{{item.addressName==''}}" class="locationInfo">{{item.address}}</text>
+        <text wx:elif="{{item.addressName != '所在位置'}}" class="locationInfo">{{item.addressName}}</text>
+      </view>
+      <view class="lableList">
+        <view wx:for="{{item.labels}}" wx:for-item="labels" wx:key="labelNo" class="lableInfo" bindtap='searchLable' data-info='{{labels.labelName}}' style="background-color:{{labels.labelColor}}">{{labels.labelName}}</view>
+      </view>
+
+    </view>
+  </scroll-view>
+
+<!-- <view class="floatRefresh">
+  <image bindtap="refreshButton" class="refreshButton" src="/images/UI/floatRefresh.png"></image>
+</view> -->
+
+<import src="/pages/index/index"/>
+<template wx:if="{{nothingControl == true}}" is="nothing" data="{{nothingContent}}"/>

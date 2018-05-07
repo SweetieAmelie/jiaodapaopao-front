@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/team",
+    "pages/restart",
+    "pages/logs/logs",
+    "pages/partner/partner",
+    "pages/index/createIdea",
+    "pages/partner/ability",
+    "pages/information/information",
+    "pages/information/myInfo",
+    "pages/message/messageList",
+    "pages/message/messageInfo",
+    "pages/information/published",
+    "pages/information/publishedProject",
+    "pages/information/publishedPartner",
+    "pages/information/yzPhone",
+    "pages/search/searchResult",
+    "pages/information/beginPerson",
+    "pages/index/showTeamDetail",
+    "pages/information/personInfo/personInfo",
+    "pages/partner/showPartnerDetail",
+    "pages/information/yzEmail",
+    "pages/index/applyDetail",
+    "pages/information/attentionList",
+    "pages/message/remainMessageList",
+    "pages/playVideo",
+    "pages/index/amendIdea",
+    "pages/information/fansList",
+    "pages/information/aboutUs/aboutUs",
+    "pages/group/merchant",
+    "pages/group/promotion",
+    "pages/group/promotionDetail",
+    "pages/information/discountList"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "交大跑跑",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#3db4f4",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/team",
+        "text": "首页",
+        "iconPath": "images/UI/zhaoduiwu1.png",
+        "selectedIconPath": "images/UI/zhaoduiwu2.png"
+      },
+      {
+        "pagePath": "pages/partner/partner",
+        "text": "校园生活",
+        "iconPath": "images/UI/yigeren.png",
+        "selectedIconPath": "images/UI/yigeren2.png"
+      },
+      {
+        "pagePath": "pages/information/myInfo",
+        "text": "个人中心",
+        "iconPath": "images/UI/wo1.png",
+        "selectedIconPath": "images/UI/wo2.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+<!--pages/information/information.wxml-->
+<view style="padding:0;background-color:#efefef;position: relative" class="container">
+  <button bindtap="moveToInformation" class="amendButton">修改资料</button>
+  <image class="headImg" mode="aspectFill" src="{{headUrl}}"></image>
+  <image class="personInfo" src="/images/UI/beijing.png">
+    <view class="personFrame">
+      <text style="font-size:28rpx" class="personName">{{nickName}}</text>
+      <image class="genderImg" src="{{genderImg}}"></image>
+    </view>
+    <view style="bottom:0rpx;top:auto" class="personFrame">
+      <text style="font-size:28rpx;max-width:280rpx;margin-right:20rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" class="personName">{{school}}</text>
+      <text style="font-size: 28rpx;color:#ffffff;width:300rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" class="personName">{{profession}} {{educationInfo}}  {{readingStatus}}</text>
+    </view>
+  </image>
+  <view class="whiteBlock"></view>
+  <view style="display:flex;flex-direction:row">
+    <textarea class="introductionInfo" placeholder="这个人很懒，什么都没留下" bindblur="saveIntroduction" auto-height bindinput="inputIntroduce" value="{{introduction}}"/>
+    <!-- <button wx:if="{{email == null}}" bindtap="cerButton" class="cerButton">未认证</button> -->
+    <button wx:if="{{email != null}}" style="background-color:#3db4f4;color:#fff" class="cerButton">已认证</button>
+  </view>
+  <view class="operateFrame">
+    <view bindtap="moveToPublished" class="selectFrame">
+      <text style="padding-right:538rpx" class="selectName">我的项目</text>
+      <image class="selectIcon" src="../../images/rightArrow.png"></image>
+    </view>
+    <view style="border:0" bindtap="moveToPraisedProject" class="selectFrame">
+      <text class="selectName">我的接单</text>
+      <image class="selectIcon" src="../../images/rightArrow.png"></image>
+    </view>
+  </view>
+  <view class="operateFrame">
+    <view bindtap="moveToPublishedPerson" class="selectFrame">
+      <text style="padding-right:512rpx" class="selectName">我的说说</text>
+      <image class="selectIcon" src="../../images/rightArrow.png"></image>
+    </view>
+  </view>
+  <view class="operateFrame">
+    <!-- <view bindtap="moveToPraiseAdvise" class="selectFrame">
+      <text style="padding-right:538rpx" class="selectName">反馈建议</text>
+      <image class="selectIcon" src="../../images/rightArrow.png"></image>
+    </view> -->
+    <view style="border:0" bindtap="moveToAboutUs" class="selectFrame">
+      <text style="padding-right:538rpx" class="selectName">关于我们</text>
+      <image class="selectIcon" src="../../images/rightArrow.png"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,122 @@
+<view class="title {{filter}}">
+  <image bindtap="moveToSearch" class="searchLogo" src="/images/UI/searchGrey.png"></image>
+  <view class="titleFrame">
+    <view bindtap="colleageButton" class="itemFrame">
+      <text class="{{selectedColleage}}">帮我取</text>
+      <view wx:if="{{colleageControl == true}}" class="itemLine"></view>
+    </view>
+    <view class="itemFrame">
+      <text bindtap="cityButton" class="{{selectedCity}}">帮我办</text>
+      <view wx:if="{{cityControl == true}}" style="width:84rpx;" class="itemLine"></view>
+    </view>
+  </view>
+  <button bindtap="editButton" class="createTeam">发单</button>
+</view>
+<!--
+<scroll-view bindscrolltolower="loadMore" style="height:1040rpx;margin-top:84rpx" scroll-y="true" enable-back-to-top="true" bindscrolltoupper="refresh" scroll-top="{{toTop}}" class="teamDtails">
+      <swiper class='bannerFrame'>
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" bindtap='moveToTeam' class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view wx:if="{{remainControl == true}}" bindtap="openRemain" class="remainMessage">
+        <text>您有未读的消息</text>
+        <image src="/images/UI/rightArrow_black.png"></image>
+      </view>
+      <view wx:for="{{ideaList}}" wx:key="ideaNo" wx:for-index="idx" class="teamLi">
+        <view wx:if="{{item.isSignUp == 1 && item.isOutDate == 2}}" class="labelTriangle">
+        </view>
+        <text wx:if="{{item.isSignUp == 1 && item.isOutDate == 2}}" class="triangleLable">已报名</text>
+        <view style="border-top: 68rpx solid #c8c8c8;" wx:if="{{item.isOutDate == 1}}" class="labelTriangle">
+        </view>
+        <text wx:if="{{item.isOutDate == 1}}" class="triangleLable">已结束</text>
+        <view class="teamNameFrame">
+          <image wx:if="{{item.isBusinessCertification == 0}}" catchtap="moveToPersonInfo" data-id="{{item.managerId}}" mode="aspectFill" style="{{item.genderCircle}}" class="headUrl" src="{{item.headerUrl}}"></image>
+          <image wx:if="{{item.isBusinessCertification == 1}}" catchtap="moveToPersonInfo" data-id="{{item.managerId}}" mode="aspectFill" style="border:4rpx solid #ffb600" class="headUrl" src="{{item.headerUrl}}"></image>
+          <view class="teamNameInfoFrame">
+            <view class="teamNameInfo">
+              <text class="teamAdminName">{{item.manager}}</text>
+              <text wx:if="{{item.college != null && item.college != '请输入学校'}}" class="teamAdminSchool">{{item.college}}</text>
+            </view>
+            <view class="statusFrame">
+              <text wx:if="{{item.isCertification == 1}}" class="statusLable">已认证</text>
+              <text wx:if="{{item.isBusinessCertification == 1}}" class="statusLableBusiness">商家认证</text>
+              <text class="teamNameTime">{{item.createTime}}</text>
+            </view>
+          </view>
+        </view>
+        <view catchtap="moveToDetail" data-id="{{item.ideaId}}" data-index="{{idx}}" class="teamContent">
+          <view class="teamTitleFrame">
+            <text class="teamName">{{item.ideaName}}</text>
+          </view>
+          <view class='teamFrameArr'>
+            <view wx:if="{{item.isBusinessCertification == 0}}" class="teamFrame">
+              <image mode="aspectFit" class="itemLogo" src="/images/UI/time.png"></image>
+              <text wx:if="{{item.ideaDate != 0}}" class="itemInfo">{{item.startTime}}</text>
+              <text wx:if="{{item.ideaDate == 0}}" class="itemInfo">永久有效</text>
+            </view>
+            <view wx:if="{{item.isBusinessCertification == 1}}" class="teamFrame">
+              <image mode="aspectFit" class="itemLogo" src="/images/UI/shijianBus.png"></image>
+              <text wx:if="{{item.ideaDate != 0}}" style='color:#ffb600' class="itemInfo">{{item.startTime}}</text>
+              <text wx:if="{{item.ideaDate == 0}}" style='color:#ffb600' class="itemInfo">永久有效</text>
+            </view>
+            <view wx:if="{{item.isBusinessCertification == 0}}" class="teamFrame">
+              <image mode="aspectFit" style="width:28rpx;height:24rpx" class="itemLogo" src="/images/UI/people.png"></image>
+              <text wx:if="{{item.peopleCounting == 0}}" class="itemInfo">{{item.applicantNumber}}/无限制</text>
+              <text wx:if="{{item.peopleCounting != 0}}" class="itemInfo">{{item.applicantNumber}}/{{item.peopleCounting}}</text>
+            </view>
+            <view wx:if="{{item.isBusinessCertification == 1}}" class="teamFrame">
+              <image mode="aspectFit" style="width:28rpx;height:24rpx" class="itemLogo" src="/images/UI/renshuBus.png"></image>
+              <text wx:if="{{item.peopleCounting == 0}}" style='color:#ffb600' class="itemInfo">{{item.applicantNumber}}/无限制</text>
+              <text wx:if="{{item.peopleCounting != 0}}" style='color:#ffb600' class="itemInfo"> {{item.applicantNumber}}/{{item.peopleCounting}}</text>
+            </view>
+            <view class='messageFrameCo'>
+              <image class="message" catchtap="moveToDetail" data-id="{{item.ideaId}}" data-index="{{idx}}" src="/images/UI/messageLogo.png"></image>
+              <view data-status="1" class="explain">{{item.commentNumber}}</view>
+            </view>
+
+          </view>
+
+          <text class="teamInfo overflow">{{item.introduction}}</text>
+          <view bindtap='moveToPromotion' data-id='{{item.ideaBusinessResponse.businessId}}' wx:if='{{item.ideaBusinessResponse.businessId !=null}}' class='businessFrame'>
+            <image src='{{item.ideaBusinessResponse.imagePath}}'></image>
+            <text>{{item.ideaBusinessResponse.businessManName}} {{item.ideaBusinessResponse.businessName}}</text>
+          </view>
+          <view class="teamPics">
+            <view wx:for="{{item.showAnnexLibraryElemList}}" wx:for-item="pics" wx:for-index="picNum" wx:key="picNo" class="teamPicsFrame">
+              <view wx:if="{{pics.status ==2}}" data-path="{{pics.annexUrl}}" catchtap="playVideo" class="teamVideo">
+                <image data-index="{{idx}}" wx:for-index="picNum"  class="teamPic" src="/images/UI/playLogo.png"></image>
+              </view>
+              <image wx:if="{{pics.status ==1}}" data-index="{{idx}}" mode="aspectFill" class="teamPic" data-pic="{{picNum}}" catchtap="selectedPic" src="{{pics.annexUrl}}"></image>
+            </view>
+          </view>
+        </view>
+        <view class="operationFrame">
+          <view wx:if="{{item.isBusinessCertification == 0}}" catchtap="openAddress" data-address="{{item.address}}" data-lat="{{item.latitude}}" data-lon="{{item.longitude}}" class="teamFrame">
+            <image mode="aspectFit" style="margin-left:0" class="itemLogo" src="/images/UI/dingwei.png"></image>
+            <text wx:if="{{item.addressName==''}}" class="itemInfo">{{item.address}}</text>
+            <text wx:else class="itemInfo">{{item.addressName}}</text>
+          </view>
+          <view wx:if="{{item.isBusinessCertification == 1}}" catchtap="openAddress" data-address="{{item.address}}" data-lat="{{item.latitude}}" data-lon="{{item.longitude}}" class="teamFrame">
+            <image mode="aspectFit" style="margin-left:0" class="itemLogo" src="/images/UI/dingwei.png"></image>
+            <text wx:if="{{item.addressName==''}}" style='color:#ffb600' class="itemInfo">{{item.address}}</text>
+            <text wx:else style='color:#ffb600' class="itemInfo">{{item.addressName}}</text>
+          </view>
+          <text wx:if="{{item.isBusinessCertification == 0}}" style='line-height:40rpx' class="distance">{{item.distance}}</text>
+          <text wx:if="{{item.isBusinessCertification == 1}}" style='color:#ffb600;line-height:40rpx' class="distance">{{item.distance}}</text>
+      </view>
+  </view>
+    </scroll-view>
+<view class="floatRefresh">
+  <image bindtap="refreshButton" class="refreshButton" src="/images/UI/floatRefresh.png"></image>
+</view>
+<view wx:if="{{mapControl == true}}" style="display:flex;flex-direction:column">
+  <map class="mapArea" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location></map>
+</view>
+
+<import src="/pages/index/index"/>
+<template wx:if="{{nothingControl == true}}" is="nothing" data="{{nothingContent}}"/>
+-->
+    

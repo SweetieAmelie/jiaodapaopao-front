@@ -1,0 +1,169 @@
+/* pages/information/information.wxss */
+.personDataHeadImg{
+    width: 136rpx;
+    height: 136rpx;
+    border-radius: 50%;
+    position: relative
+}
+.personDataHeadImg text{
+    position: absolute;
+    z-index: 99;
+    bottom:0;
+    text-align: center;
+    width: 136rpx;
+    background-color: #e4e4e4;
+    color: #4A4A4A;
+    font-size: 24rpx;
+}
+.personDataFrame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.personDataName{
+    padding: 40rpx 24rpx;
+    font-size: 36rpx;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+}
+.line{
+    width: 256rpx;
+    border: 1px solid #e4e4e4
+}
+.itemList{
+    display: flex;
+    flex-direction: column
+}
+.itemLi{
+    width: 580rpx;
+    border-bottom: 1px solid #e4e4e4
+}
+.item{
+    padding: 20rpx 0;
+    width: 580rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+    line-height: 32rpx;
+    word-break: break-all
+}
+.educationLine{
+    padding: 36rpx 0;
+    width: 164rpx;
+    font-size: 32rpx;
+    color: #BBBBBB;
+    letter-spacing: 0px;
+    line-height: 16px;
+    text-align: center;
+    border-bottom:1px solid #e4e4e4 
+}
+.textareaItem{
+    padding: 30rpx 0;
+    width: 580rpx;
+    height: 100rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #4A4A4A;
+    letter-spacing: 0px;
+    line-height: 16px;
+}
+.saveButton{
+    margin-top: 60rpx;
+    width: 682rpx;
+    height: 90rpx;
+    border-radius: 8rpx;
+    color: #ffffff;
+    line-height: 90rpx;
+    text-align: center;
+    background-color: #3db4f4
+}
+.amendPhone{
+    margin-left: auto;
+    margin-right: 34rpx;
+    font-size: 28rpx;
+    color: #3db4f4;
+}
+/***** 学校搜索 *****/
+.searchSchool{
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  z-index: 999;
+}
+.titleFrame{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 120rpx;
+  width: 750rpx;
+  background-color: #ffffff
+}
+.seaechFrame{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+}
+.searchLogo{
+  position: absolute;
+  top:36rpx;
+  left:40rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.searchInput{
+  padding: 0 66rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  width: 492rpx;
+  height: 64rpx;
+  background: #ffffff;
+  border: 1px solid #3db4f4;
+  border-radius: 100px;
+  font-size: 28rpx;
+  color: #91c8ff;
+}
+.searchDelete{
+  position: absolute;
+  top:38rpx;
+  left: 614rpx;
+  width: 28rpx;
+  height: 28rpx
+}
+.closeWin{
+  position: absolute;
+  top:36rpx;
+  left: 690rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.schoolList{
+  margin-top: 120rpx;
+  border-top: 1px solid #e4e4e4;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column; 
+  overflow-y:auto;
+}
+.schoolLi{
+  display: flex;
+  flex-direction: row;
+  margin-left: 28rpx;
+  width: 722rpx;
+  height: 88rpx;
+  border-bottom: 1px solid #e4e4e4 
+}
+.schoolLi text{
+  font-size: 32rpx;
+  color: #4A4A4A;
+  margin: auto 0;
+}
+.remind{
+  font-size: 24rpx;
+  color:#9b9b9b;
+  margin:20rpx auto 0 40rpx;
+}

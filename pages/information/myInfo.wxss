@@ -1,0 +1,137 @@
+/* pages/information/information.wxss */
+page{
+  background-color: #efefef;
+  overflow-x: hidden
+}
+.operateFrame{
+  margin-top: 20rpx;
+  width: 750rpx;
+  background: #ffffff
+}
+.promotionCodeFrame{
+  margin-top: 20rpx;
+  width: 750rpx;
+  height: 280rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.codeTitle{
+  width: 720rpx;
+  height: 88rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2rpx solid #e4e4e4
+}
+.codeTitle_text{
+  margin: auto 0 auto 12rpx;
+  width: 420rpx;
+  font-size: 32rpx;
+  color: #4A4A4A;
+  letter-spacing: -0.39px;
+  line-height: 32rpx;
+}
+.codeTitle_more{
+  margin: auto 20rpx auto 0;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+.promotionName{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+}
+.promotionName_title{
+  margin: 20rpx 0 28rpx 40rpx;
+  font-size: 28rpx;
+  color: #4A4A4A;
+  letter-spacing: 0px;
+  line-height: 28rpx;
+}
+.promotionName_time{
+  margin: 20rpx 28rpx 0 auto;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #9B9B9B;
+  letter-spacing: 0px;
+  line-height: 24rpx;
+}
+.codeFrame{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+}
+.nullCodeFrame{
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  align-items: center;
+  margin: auto 0;
+}
+.codeFrame text{
+  margin: 0 auto;
+  font-size: 72rpx;
+  color: #3DB4F4;
+  letter-spacing: 1.49px;
+  line-height: 72rpx;
+}
+.nullCodeFrame text{
+  margin: auto;
+  font-size: 28rpx;
+  color: #9B9B9B;
+  letter-spacing: 1.49px;
+  line-height: 40rpx;
+}
+.selectFrame{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40rpx;
+    height: 88rpx;
+    width: 710rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4
+}
+.selectName{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 28rpx;
+    color: #4A4A4A;
+    letter-spacing: -0.34px;
+    line-height: 40px;
+    padding-right: 510rpx
+}
+.selectIcon{
+    margin: auto 10rpx auto auto;
+    padding-left:auto;
+    padding-right: 20rpx; 
+    width: 20rpx;
+    height: 20rpx
+}
+.attentionFrame{
+  width: 750rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row
+}
+.attentionNumFrame{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx auto 0 auto;
+}
+.attentionNum{
+  width: 208rpx;
+  height: 24rpx;
+  display: flex;
+  flex-direction: row;
+  border-right: 2rpx solid #d8d8d8
+}
+.attentionNum text{
+  margin: 0 auto;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #4A4A4A;
+}

@@ -1,0 +1,14 @@
+<view style="padding:0;background-color:#efefef" class="container">
+    <view style="margin-top:20rpx" class="itemList">
+        <view class="itemLi">
+          <text class="itemName">跑单名称：</text>
+          <input class="itemInput" bindinput="projectName" value="{{projectName}}" placeholder="填写一个主题" placeholder-style="color:#bbbbbb" />
+        </view>
+        <view style="flex-direction:column;min-height:440rpx;height:auto" class="itemLi">
+          <textarea maxlength="-1" auto-height="true" class="itemTextarea" bindinput="ideaIntroduce" value="{{ideaIntroduce}}" placeholder="填写跑单内容..." placeholder-style="color:#bbbbbb" />
+        </view>
+      <button disabled="{{issueButtonControl}}" bindtap="issueButton" class="saveButton">发布</button>
+    </view>
+</view>
+<import src="/pages/index/index"/>
+<!-- <template wx:if="{{promptControl == true}}" is="prompt" data="{{prompt}}"></template> -->
